@@ -5,10 +5,14 @@ const computerSelection  = computerPlay();
 
 // function that plays five rounds of the game, and returns the results of the winner after the five rounds
 
-function game(playRound) {
-  
+function game() {
+  for (let i = 0; i < 5; i++){
+    const playerSelection = userPlay();
+    const computerSelection = computerPlay();
+    const currentRound = playRound(playerSelection, computerSelection);
+    console.log(currentRound);
+  }
 }
-
 
 // Function that grabs the input from userPlay and grabs the input from computerPlay and 
 // returns a result, either win, lose or tie!
@@ -44,5 +48,4 @@ function playRound(playerSelection, computerSelection) {
    return choices[Math.floor(Math.random()*choices.length)];
  }
 
-
-console.log(playRound(playerSelection, computerSelection));
+console.log(game());
