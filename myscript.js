@@ -66,7 +66,7 @@ function playRound(playerSelection, computerSelection) {
 
    if (result === playerWin) {
      playerScore++;
-   } else if (result === "tie"){
+   } else if (result === draw){
      draws++;
    } else {
      computerScore++;
